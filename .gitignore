@@ -2,6 +2,7 @@
 *.log
 environment.txt
 node_modules
+.vscode
 environment.json
 *.sass-cache
 

@@ -13,9 +13,9 @@
 
     function getTravelDuration(homeAddress, workAddress) {
       if (homeAddress === '' || homeAddress == null) {
-        homeAddress = 'Seattle, WA';
+        homeAddress = 'Vincent, OH';
       } else if (workAddress === '' || workAddress == null) {
-        workAddress = 'Redmond, WA';
+        workAddress = 'Marietta, OH';
       }
       var url = '/mirror/getTraffic?homeAddress=' + homeAddress + '&workAddress=' + workAddress;
       $.ajax({
