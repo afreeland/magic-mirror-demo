@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/andypavia/MagicMirrorServer/issues"
   },
-  "homepage": "https://github.com/andypavia/MagicMirrorServer#readme"
+  "homepage": "https://github.com/andypavia/MagicMirrorServer#readme",
+  "engines": {
+    "node": "~6.9.1"
+  }
 }
