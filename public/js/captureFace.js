@@ -63,9 +63,10 @@
 
         $.ajax({
           'url': '/face/addFace',
-          'beforeSend': function(xhrObj) {
-            xhrObj.setRequestHeader('Content-Type', 'application/octet-stream');
-          },
+          contentType: 'application/octet-stream',
+          // 'beforeSend': function(xhrObj) {
+          //   xhrObj.setRequestHeader('Content-Type', 'application/octet-stream');
+          // },
           'type': 'POST',
           'data': byteArray,
           'processData': false

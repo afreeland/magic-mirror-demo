@@ -11,7 +11,7 @@ module.exports = function(app) {
       request = require('request'),
       mongoose = require('mongoose'),
       nconf = require('nconf').file({ 'file': 'environment.json' }).env(),
-      bingApiKey = nconf.get('BING_API_KEY');
+      bingApiKey = nconf.get('BING_TRAFFIC');
 
   mirrorRouter.use(function(req, res, next) {
     next();

@@ -12,9 +12,11 @@
     var initialized = false;
 
     function getTravelDuration(homeAddress, workAddress) {
-      if (homeAddress === '' || homeAddress == null) {
+      if (homeAddress === '' || !homeAddress) {
         homeAddress = 'Vincent, OH';
-      } else if (workAddress === '' || workAddress == null) {
+      }
+      
+      if (workAddress === '' || !workAddress) {
         workAddress = 'Marietta, OH';
       }
       var url = '/mirror/getTraffic?homeAddress=' + homeAddress + '&workAddress=' + workAddress;

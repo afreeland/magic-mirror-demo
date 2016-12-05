@@ -10,7 +10,7 @@ module.exports = function(app) {
       quotes = JSON.parse(fs.readFileSync('quotes.json', 'utf8')),
       oxfordKey = nconf.get('OXFORD_SECRET_KEY'), // Subscription key for Project Oxford.
       oxfordEmotionKey = nconf.get('OXFORD_EMOTION_SECRET_KEY'),
-      oxfordList = 'final_face_list',
+      oxfordList = 'mundane_mirror',
       minConfidence = 0.5,
       mongoose = require('mongoose'),
       bandname = require('bandname');
@@ -40,6 +40,7 @@ module.exports = function(app) {
       body = JSON.parse(body);
       if (body.error) {
         console.log(body.error);
+        res.send(body.error);
       }
       else {
         var model = mongoose.model('Person');

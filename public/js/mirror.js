@@ -28,7 +28,7 @@
 
   function updateTime() {
     var now = moment();
-    time.html(now.format('h:mm'));
+    time.html(now.utcOffset('-0500').format('h:mm'));
     date.html(now.format('MMMM D'));
     day.html(now.format('dddd'));
     setTimeout(updateTime, 1e3 * 60);
